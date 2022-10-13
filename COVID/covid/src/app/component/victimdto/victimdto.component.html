@@ -1,0 +1,20 @@
+<div class="table1">
+  <table>
+    <tr>
+      <td>Employee</td>
+      <td>Affected Date</td>
+      <td>No. Of Dosages</td>
+      <td>Funds</td>
+      <td>Sick Leaves</td>
+      <td>Status</td>
+    </tr>
+    <tr *ngFor="let i of victimArr">
+      <td>{{ i.employee.name }}</td>
+      <td>{{ i.affectedDate }}</td>
+      <td>{{ i.dosages }}</td>
+      <td>{{ i.funds }}</td>
+      <td>{{ i.sickLeaves }}</td>
+      <td>{{ i.status }}</td>
+    </tr>
+  </table>
+</div>

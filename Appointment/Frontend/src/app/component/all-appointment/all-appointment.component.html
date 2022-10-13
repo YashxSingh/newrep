@@ -1,0 +1,19 @@
+<div class="table1">
+  <ul>
+    
+      <label>Name</label>
+      <label>Age</label>
+      <label>Contact</label>
+      <label>Disease</label>
+    
+    <div *ngFor="let i of appointmentArr">
+      <li>{{ i.name }}</li>
+      <li>{{ i.age }}</li>
+      <li>{{ i.contact }}</li>
+      <li>{{ i.disease }}</li>
+    </div>
+    <p *ngFor="let i of doctorArr">
+      {{ i.name }}
+    </p>
+  </table>
+</div>

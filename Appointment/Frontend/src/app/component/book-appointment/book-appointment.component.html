@@ -1,0 +1,22 @@
+<div class = fclass>
+    <form #patientForm="ngForm" (submit) = "submitPatient(patientForm)">
+        <label>Name :  </label>
+        <input type="text" name="name" ngModel #name="ngModel" placeholder="Enter Your Name"><br />
+        <label>Disease:  </label>
+        <input type="text" name="disease" ngModel #disease="ngModel" placeholder="Enter Disease Name"><br />
+        <label>Contact :  </label>
+        <input type="text" name="contact" ngModel #contact="ngModel" placeholder="Enter Your Contact Details"><br />
+        <label>Age :  </label>
+        <input type="number" name="age" ngModel #age="ngModel" placeholder="Enter Your Age"><br />
+        <label>Doctor :  </label>
+        <select name="doctor" ngModel #doctor="ngModel" (change)="doctorSelect(patientForm)">
+            <option *ngFor="let doc of doctorArr" value = "{{doc.id}}">{{doc.name}}  -   {{doc.speciality}}</option>
+        </select><br />
+        <label>Slots Available :  </label>
+        <select name="slots" ngModel #slots="ngModel" >
+            <option selected>Select</option>
+            <option *ngFor="let slot of slotsArr" value = "{{slot.id}}">{{slot.time}}</option>
+        </select><br><br>
+        <input type="submit" value="Book" class="submit">
+    </form>
+</div>
